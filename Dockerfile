@@ -11,6 +11,9 @@ FROM docker.io/library/ruby:$RUBY_VERSION-slim AS base
 # Rails app lives here
 WORKDIR /rails
 
+RUN apt-get update -qq && apt-get install -y libpq-dev
+
+
 # Install base packages
 RUN apt-get update -qq && \
     apt-get install --no-install-recommends -y curl libjemalloc2 libvips sqlite3 && \
@@ -19,7 +22,7 @@ RUN apt-get update -qq && \
 # Set production environment
 ENV RAILS_ENV="production" \
     BUNDLE_DEPLOYMENT="1" \
-    BUNDLE_PATH="/home/bartek/.rbenv/shims/bundle" \
+    BUNDLE_PATH="/usr/local/bundle" \
     BUNDLE_WITHOUT="development"
 
 # Throw-away build stage to reduce size of final image
