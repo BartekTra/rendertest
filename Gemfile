@@ -57,6 +57,6 @@ group :test do
 end
 
 
-gem "pg", "~> 1.5", ">= 1.5.8"
+gem "pg", "~> 1.5", ">= 1.5.0"
 
 gem "postgresql", "~> 1.0"
