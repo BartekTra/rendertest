@@ -56,7 +56,8 @@ group :test do
   gem "selenium-webdriver"
 end
 
-
-gem "pg", "~> 1.4", ">= 1.4.0"
-
 gem "postgresql", "~> 1.0"
+gem "unicorn", "~> 6.1.0"
+gem "pg", "~> 1.3.5"
+gem "sidekiq", "~> 6.4.2"
+gem "redis-rails", "~> 5.0.2"
