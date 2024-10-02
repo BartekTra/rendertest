@@ -1,5 +1,8 @@
 source "https://rubygems.org"
 
+ruby "3.3.4"
+
+gem "bundler", "~> 2.5", ">= 2.5.17"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.2.1"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
@@ -56,8 +59,12 @@ group :test do
   gem "selenium-webdriver"
 end
 
+group :production do
+  # Use postgresql as the database for Active Record
+  gem "pg", ">= 1.4"
+end
+
 gem "postgresql", "~> 1.0"
 gem "unicorn", "~> 6.1.0"
-gem "pg", "~> 1.3.5"
 gem "sidekiq", "~> 6.4.2"
 gem "redis-rails", "~> 5.0.2"
