@@ -66,5 +66,5 @@ end
 
 gem "postgresql", "~> 1.0"
 gem "unicorn", "~> 6.1.0"
-gem "sidekiq", "~> 6.4.2"
+gem "sidekiq", "~> 7.3.7"
 gem "redis-rails", "~> 5.0.2"
